@@ -53,6 +53,7 @@
         class="music-button"
         onclick="toggleMusic()"
         aria-label="Play or pause music"
+        aria-pressed="false"
     >
 
         ♫
@@ -494,6 +495,7 @@
                         <img
                             src="pic1.JPG"
                             alt="One of our memories"
+                            loading="lazy"
                         >
 
 
@@ -524,6 +526,7 @@
                         <img
                             src="pic2.jpg"
                             alt="One of our memories"
+                            loading="lazy"
                         >
 
 
@@ -554,6 +557,7 @@
                         <img
                             src="pic3.jpg"
                             alt="One of our memories"
+                            loading="lazy"
                         >
 
 
@@ -585,6 +589,12 @@
                             id="memoryVideo"
                             controls
                             playsinline
+                            preload="metadata"
+                            poster="pic1.JPG"
+                            style="max-width:100%;height:auto;"
+                            aria-label="Memory video: our first date"
+                            controlslist="nodownload noremoteplayback"
+                            disablepictureinpicture
                         >
 
 
