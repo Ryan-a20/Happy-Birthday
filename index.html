@@ -97,45 +97,52 @@
 
                 <h1 id="memories-title">But anyway...<br>Some of My Favourite Memories of Us ❤️</h1>
 
-                <div class="slideshow-container" aria-roledescription="carousel" aria-label="Memory slideshow">
-                    <div class="slide active" role="group" aria-roledescription="slide" aria-label="Memory 1">
-                        <img src="pic1.JPG" alt="Memory 1" class="media">
-                    </div>
+                <!-- Scrapbook: grid of thumbnails inside a paper area -->
+                <div class="scrapbook-wrapper">
+                    <article class="letter-paper scrapbook-paper" aria-label="Scrapbook">
+                        <div class="scrapbook-grid">
+                            <button class="thumbnail" data-type="image" data-src="pic1.JPG" aria-label="Open Memory 1">
+                                <img src="pic1.JPG" alt="Memory 1: us together" loading="lazy">
+                            </button>
 
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="Memory 2">
-                        <img src="pic2.jpg" alt="Memory 2" class="media">
-                    </div>
+                            <button class="thumbnail" data-type="image" data-src="pic2.jpg" aria-label="Open Memory 2">
+                                <img src="pic2.jpg" alt="Memory 2: happy moment" loading="lazy">
+                            </button>
 
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="Memory 3">
-                        <img src="pic3.jpg" alt="Memory 3" class="media">
-                    </div>
+                            <button class="thumbnail" data-type="image" data-src="pic3.jpg" aria-label="Open Memory 3">
+                                <img src="pic3.jpg" alt="Memory 3: candid" loading="lazy">
+                            </button>
 
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="Memory video">
-                        <video id="memoryVideo" controls class="media">
-                            <source src="vid1-3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                            <button class="thumbnail" data-type="video" data-src="vid1-3.mp4" aria-label="Open Memory video">
+                                <video muted playsinline preload="metadata" poster="pic3.jpg">
+                                    <source src="vid1-3.mp4" type="video/mp4">
+                                </video>
+                            </button>
+                        </div>
 
-                    <div class="slide-navigation">
-                        <button class="prev-button" onclick="changeSlide(-1)" aria-label="Previous memory">❮</button>
-                        <button class="next-button" onclick="changeSlide(1)" aria-label="Next memory">❯</button>
-                    </div>
-                </div>
+                        <p class="scrapbook-caption">Click a thumbnail to open the memory. Use the arrows or Esc to close.</p>
 
-                <div class="slideshow-dots" role="tablist" aria-label="Slide navigation">
-                    <button class="dot active-dot" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
-                    <button class="dot" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
-                    <button class="dot" onclick="goToSlide(2)" aria-label="Go to slide 3"></button>
-                    <button class="dot" onclick="goToSlide(3)" aria-label="Go to slide 4"></button>
-                </div>
-
-                <div class="section-navigation">
-                    <button onclick="showPage('letter')" aria-label="Back to letter">← letter</button>
+                        <div class="section-navigation">
+                            <button onclick="showPage('letter')" aria-label="Back to letter">← letter</button>
+                        </div>
+                    </article>
                 </div>
             </main>
         </section>
     </main>
+
+    <!-- Lightbox / modal for viewing media without covering the whole screen -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content" role="dialog" aria-modal="true">
+            <button id="lightboxClose" class="lightbox-close" aria-label="Close">✕</button>
+            <div id="lightboxMedia" class="lightbox-media"></div>
+            <div class="lightbox-controls">
+                <button id="lightboxPrev" class="control-btn" aria-label="Previous">❮</button>
+                <button id="lightboxNext" class="control-btn" aria-label="Next">❯</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 </body>
