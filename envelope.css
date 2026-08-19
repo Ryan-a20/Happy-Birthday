@@ -1,0 +1,73 @@
+/* Envelope animations: float, open transforms, transitions */
+.envelope {
+    perspective: 1000px;
+    animation: hb-envelope-float 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes hb-envelope-float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Smooth piece transitions */
+.envelope .letter-preview,
+.envelope-left,
+.envelope-right,
+.envelope-bottom,
+.wax-seal {
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1), opacity 0.45s ease;
+    transform-origin: center bottom;
+}
+
+/* Open state: letter pops up, folds move, seal fades */
+.envelope.open .letter-preview {
+    transform: translateY(-180px) rotate(-1deg) !important;
+    z-index: 10;
+}
+
+.envelope.open .envelope-left {
+    transform: translateX(-8px) rotate(-12deg);
+    z-index: 2;
+}
+
+.envelope.open .envelope-right {
+    transform: translateX(8px) rotate(12deg);
+    z-index: 2;
+}
+
+.envelope.open .envelope-bottom {
+    transform: translateY(18px);
+    z-index: 1;
+}
+
+.envelope.open .wax-seal {
+    transform: translate(-50%, -60%) scale(0.6) rotate(-8deg);
+    opacity: 0;
+}
+
+/* Slight lift while open */
+.envelope.open {
+    transform: translateY(-12px) rotate(-2deg);
+}
+
+/* Hide the "open me" hint while opening */
+.envelope-button.opening + .open-me {
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+/* Click feedback */
+.envelope-button:active .envelope {
+    transform: translateY(-2px) scale(0.995);
+    transition: transform 0.12s ease;
+    animation: none;
+}
+
+/* Focus for keyboard users */
+.envelope-button:focus-visible {
+    outline: 3px solid rgba(122,49,42,0.15);
+    outline-offset: 6px;
+}
