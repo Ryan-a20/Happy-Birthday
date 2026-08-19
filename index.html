@@ -17,9 +17,9 @@
 
 <body>
 
-    <!-- ================================
+    <!-- ============================
          BACKGROUND MUSIC
-         ================================ -->
+         ============================ -->
 
     <audio
         id="backgroundMusic"
@@ -45,9 +45,9 @@
     </button>
 
 
-    <!-- ================================
+    <!-- ============================
          PAGE 1 — COVER
-         ================================ -->
+         ============================ -->
 
     <section
         id="cover"
@@ -87,6 +87,7 @@
             <button
                 class="envelope-button"
                 onclick="openLetter()"
+                aria-label="Open the letter"
             >
 
                 <div class="envelope">
@@ -113,7 +114,7 @@
 
 
             <p class="open-me">
-                open me
+                tap the envelope ♡
             </p>
 
         </div>
@@ -126,9 +127,9 @@
     </section>
 
 
-    <!-- ================================
+    <!-- ============================
          PAGE 2 — LETTER
-         ================================ -->
+         ============================ -->
 
     <section
         id="letter"
@@ -142,7 +143,6 @@
 
 
             <article class="letter-paper">
-
 
                 <p class="letter-date">
                     August 28th, 2026
@@ -236,16 +236,11 @@
 
                 <div class="section-navigation">
 
-                    <button
-                        onclick="showPage('cover')"
-                    >
+                    <button onclick="showPage('cover')">
                         ← cover
                     </button>
 
-
-                    <button
-                        onclick="showPage('memories')"
-                    >
+                    <button onclick="showPage('memories')">
                         our memories →
                     </button>
 
@@ -258,9 +253,9 @@
     </section>
 
 
-    <!-- ================================
+    <!-- ============================
          PAGE 3 — MEMORIES
-         ================================ -->
+         ============================ -->
 
     <section
         id="memories"
@@ -268,7 +263,6 @@
     >
 
         <main class="scrapbook-page">
-
 
             <p class="little-note">
                 Actually, we need like 1000 pictures because finding these
@@ -288,10 +282,7 @@
             </p>
 
 
-            <!-- SLIDESHOW -->
-
             <div class="slideshow-container">
-
 
                 <!-- PIC 1 -->
 
@@ -373,7 +364,6 @@
 
                         </video>
 
-
                         <p>
                             had to put this one here 😭❤️
                         </p>
@@ -383,29 +373,29 @@
                 </div>
 
 
-                <!-- PREVIOUS -->
+                <!-- LEFT -->
 
                 <button
                     class="prev"
                     onclick="changeSlide(-1)"
+                    aria-label="Previous memory"
                 >
                     ‹
                 </button>
 
 
-                <!-- NEXT -->
+                <!-- RIGHT -->
 
                 <button
                     class="next"
                     onclick="changeSlide(1)"
+                    aria-label="Next memory"
                 >
                     ›
                 </button>
 
             </div>
 
-
-            <!-- DOTS -->
 
             <div class="slide-dots">
 
@@ -432,20 +422,13 @@
             </div>
 
 
-            <!-- NAVIGATION -->
-
             <div class="section-navigation">
 
-                <button
-                    onclick="showPage('letter')"
-                >
+                <button onclick="showPage('letter')">
                     ← back to the letter
                 </button>
 
-
-                <button
-                    onclick="showPage('final')"
-                >
+                <button onclick="showPage('final')">
                     one last thing →
                 </button>
 
@@ -456,9 +439,9 @@
     </section>
 
 
-    <!-- ================================
+    <!-- ============================
          PAGE 4 — FINAL
-         ================================ -->
+         ============================ -->
 
     <section
         id="final"
