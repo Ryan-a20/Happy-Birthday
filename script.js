@@ -250,24 +250,3 @@ if (memoryVideo) {
    ========================================= */
 
 showSlide(0);
-
-
-/* =========================================
-   COPILOT: disable added animations (user request)
-   This injects a small override style at runtime to
-   turn off CSS animations and transitions without
-   modifying the original stylesheet.
-   ========================================= */
-(function disableAnimations(){
-    try {
-        const css = `* , *::before, *::after {\n  animation: none !important;\n  transition: none !important;\n  scroll-behavior: auto !important;\n}`;
-        const s = document.createElement('style');
-        s.setAttribute('data-copilot','disable-animations');
-        s.appendChild(document.createTextNode(css));
-        (document.head || document.documentElement).appendChild(s);
-    }
-    catch (e) {
-        // fail silently — nothing critical
-        console.warn('Could not inject disable-animations stylesheet', e);
-    }
-})();
