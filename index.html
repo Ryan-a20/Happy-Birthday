@@ -3,148 +3,513 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A small birthday letter and scrapbook.">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Happy Birthday Lolo ❤️</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-    <audio id="backgroundMusic" loop preload="auto">
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support audio.
+
+    <!-- ================================
+         BACKGROUND MUSIC
+         ================================ -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+        <source
+            src="song.mp3"
+            type="audio/mpeg"
+        >
     </audio>
 
-    <button id="musicButton" class="music-button" aria-pressed="false" aria-label="Play or pause music">♪</button>
 
-    <main id="site" role="main">
-        <section id="cover" class="page active-page cover-page" aria-labelledby="opening-title">
-            <div class="decor decor-one">❀</div>
-            <div class="decor decor-two">♡</div>
-            <div class="decor decor-three">✿</div>
+    <!-- MUSIC BUTTON -->
 
-            <p class="tiny-opening">August 28th, 2026</p>
+    <button
+        id="musicButton"
+        class="music-button"
+        onclick="toggleMusic()"
+        aria-label="Play or pause music"
+    >
+        ♫
+    </button>
 
-            <h1 id="opening-title" class="opening-title">
-                Happy 20th,
-                <span>Lolo ❤️</span>
+
+    <!-- ================================
+         PAGE 1 — COVER
+         ================================ -->
+
+    <section
+        id="cover"
+        class="page active-page cover-page"
+    >
+
+        <div class="decor decor-one">❀</div>
+        <div class="decor decor-two">♡</div>
+        <div class="decor decor-three">✿</div>
+
+
+        <p class="tiny-opening">
+            August 28th, 2026
+        </p>
+
+
+        <h1 class="opening-title">
+
+            Happy 20th,
+
+            <span>
+                Lolo ❤️
+            </span>
+
+        </h1>
+
+
+        <p class="opening-subtitle">
+            a little something for my queen
+        </p>
+
+
+        <!-- ENVELOPE -->
+
+        <div class="envelope-area">
+
+            <button
+                class="envelope-button"
+                onclick="openLetter()"
+            >
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="letter-preview">
+                        for you ♡
+                    </div>
+
+                    <div class="envelope-left"></div>
+
+                    <div class="envelope-right"></div>
+
+                    <div class="envelope-bottom"></div>
+
+                    <div class="wax-seal">
+                        R
+                    </div>
+
+                </div>
+
+            </button>
+
+
+            <p class="open-me">
+                open me
+            </p>
+
+        </div>
+
+
+        <p class="from-opening">
+            — Ryan
+        </p>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 2 — LETTER
+         ================================ -->
+
+    <section
+        id="letter"
+        class="page"
+    >
+
+        <div class="letter-wrapper">
+
+            <div class="paper-tape tape-one"></div>
+            <div class="paper-tape tape-two"></div>
+
+
+            <article class="letter-paper">
+
+
+                <p class="letter-date">
+                    August 28th, 2026
+                </p>
+
+
+                <p class="dear">
+                    My Lolo,
+                </p>
+
+
+                <h1>
+                    Happy Birthday!!!!
+                </h1>
+
+
+                <p>
+                    As you can tell, I’m nothing but elated for your dirty 20😛.
+                    I feel like there’s a lot I have to say, but let’s see where
+                    this goes.
+                </p>
+
+
+                <p>
+                    Lolo, I love the person you’ve grown to become over these past
+                    years, and I love that I’ve been there for most parts of it.
+                    You’re always one to brighten up my day, worry even when you’re
+                    not supposed to, and always wanna see me win. I know that’s
+                    something you do for everyone you care about, but it means so
+                    much more to me than you probably know. And I hope you know it
+                    goes both ways because I’ll always wanna see you win too.
+                    Seeing you happy, achieving the things you want, and becoming
+                    everything you’ve always wanted to be genuinely makes me happy.
+                    I’ll always be proud of you and rooting for you, even when I’m
+                    not there to see it myself.
+                </p>
+
+
+                <p>
+                    I love that we’ve grown together and gone through whichever
+                    hurdles life has put us through, but we’ve still somehow always
+                    managed to find a way back to each other. No matter what happens,
+                    no matter how much time passes or how complicated things get,
+                    somehow it’s always you and me in the end. And I honestly think
+                    there’s no other person for me out there. I met my person already,
+                    and I’m so grateful that person is you.
+                </p>
+
+
+                <p>
+                    When guys ask me for my reason as to why it’s always you, it’s
+                    only because there’s no other place that feels like home.
+                    There’s no person that gets me like you do, there’s no one that
+                    tolerates me like you do, and there’s no one as amazing as you
+                    are. You’ve seen so many different versions of me, the good and
+                    the bad, and somehow you’ve still managed to love me through all
+                    of them. I don’t think you’ll ever fully understand how much that
+                    means to me.
+                </p>
+
+
+                <p>
+                    I wish I could be there to celebrate this day with you, to see
+                    you smile, annoy you in person😭, and show you just how much you
+                    mean to me. I hate that I can’t, because if there’s anyone whose
+                    special day I’d want to be there for, it’s yours.
+                </p>
+
+
+                <p>
+                    If I go on with this, I genuinely won’t stop because there’s so
+                    much I could say about you and what you mean to me. So, Happy
+                    Birthday my queen. I hope you have a good one and that 20 treats
+                    you as amazingly as you deserve. I’m so proud of the person
+                    you’ve become, and I can’t wait to see the person you continue
+                    to grow into.
+                </p>
+
+
+                <p class="love-you">
+                    I love you always ❤️.
+                </p>
+
+
+                <p class="signature">
+                    yours always,
+                    <br>
+                    Ryan ♡
+                </p>
+
+
+                <div class="section-navigation">
+
+                    <button
+                        onclick="showPage('cover')"
+                    >
+                        ← cover
+                    </button>
+
+
+                    <button
+                        onclick="showPage('memories')"
+                    >
+                        our memories →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 3 — MEMORIES
+         ================================ -->
+
+    <section
+        id="memories"
+        class="page"
+    >
+
+        <main class="scrapbook-page">
+
+
+            <p class="little-note">
+                Actually, we need like 1000 pictures because finding these
+                was so hard and it shouldn't be 😭
+            </p>
+
+
+            <h1>
+                But anyway...
+                <br>
+                Some of My Favourite Memories of Us ❤️
             </h1>
 
-            <p class="opening-subtitle">a little something for my queen</p>
 
-            <div class="envelope-area">
-                <button class="envelope-button" onclick="openLetter()" aria-label="Open the letter">
-                    <div class="envelope" aria-hidden="true">
-                        <div class="envelope-back"></div>
+            <p class="scrapbook-subtitle">
+                little pieces of us
+            </p>
 
-                        <div class="letter-preview">
-                            <span>for you ♡</span>
-                        </div>
 
-                        <div class="envelope-left"></div>
-                        <div class="envelope-right"></div>
-                        <div class="envelope-bottom"></div>
+            <!-- SLIDESHOW -->
 
-                        <div class="wax-seal">R</div>
+            <div class="slideshow-container">
+
+
+                <!-- PIC 1 -->
+
+                <div class="slide active">
+
+                    <div class="polaroid rotate-left">
+
+                        <img
+                            src="pic1.JPG"
+                            alt="One of our memories"
+                        >
+
+                        <p>
+                            one of my favourites ♡
+                        </p>
+
                     </div>
+
+                </div>
+
+
+                <!-- PIC 2 -->
+
+                <div class="slide">
+
+                    <div class="polaroid rotate-right">
+
+                        <img
+                            src="pic2.jpg"
+                            alt="One of our memories"
+                        >
+
+                        <p>
+                            my favourite person ❤️
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PIC 3 -->
+
+                <div class="slide">
+
+                    <div class="polaroid rotate-left">
+
+                        <img
+                            src="pic3.jpg"
+                            alt="One of our memories"
+                        >
+
+                        <p>
+                            us &gt;&gt;&gt;
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO -->
+
+                <div class="slide">
+
+                    <div class="polaroid rotate-right">
+
+                        <video
+                            id="memoryVideo"
+                            controls
+                            playsinline
+                            preload="metadata"
+                        >
+
+                            <source
+                                src="vid1.mp4"
+                                type="video/mp4"
+                            >
+
+                        </video>
+
+
+                        <p>
+                            had to put this one here 😭❤️
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREVIOUS -->
+
+                <button
+                    class="prev"
+                    onclick="changeSlide(-1)"
+                >
+                    ‹
                 </button>
 
-                <p class="open-me">open me ⬆️</p>
+
+                <!-- NEXT -->
+
+                <button
+                    class="next"
+                    onclick="changeSlide(1)"
+                >
+                    ›
+                </button>
+
             </div>
 
-            <p class="from-opening">— Ryan</p>
-        </section>
 
-        <section id="letter" class="page" aria-labelledby="letter-title">
-            <div class="letter-wrapper">
-                <div class="paper-tape tape-one" aria-hidden="true"></div>
-                <div class="paper-tape tape-two" aria-hidden="true"></div>
+            <!-- DOTS -->
 
-                <div class="small-flower flower-left" aria-hidden="true">❀</div>
-                <div class="small-flower flower-right" aria-hidden="true">✿</div>
+            <div class="slide-dots">
 
-                <article class="letter-paper" role="article" aria-label="Birthday letter">
-                    <p class="letter-date">August 28th, 2026</p>
+                <span
+                    class="dot active-dot"
+                    onclick="goToSlide(0)"
+                ></span>
 
-                    <p class="dear">My Lolo,</p>
+                <span
+                    class="dot"
+                    onclick="goToSlide(1)"
+                ></span>
 
-                    <h1 id="letter-title">Happy Birthday!!!!</h1>
+                <span
+                    class="dot"
+                    onclick="goToSlide(2)"
+                ></span>
 
-                    <p>It feels surreal to celebrate your twentieth. I’m so proud of the woman you’re becoming — you’re kind, fearless in your gentleness, and you have a way of making ordinary days feel like something special. I wish I could be there in person to see you smile and to celebrate the little moments that make you, you.</p>
+                <span
+                    class="dot"
+                    onclick="goToSlide(3)"
+                ></span>
 
-                    <p>We’ve grown so much together. Through every misstep and every triumph, you’ve shown me patience and the kind of love that quietly holds things together. You make me better, not because you try to change me, but because you make me want to be better.</p>
-
-                    <p>When people ask me why it’s always you, I tell them there is no other person who feels like home. You get my weird jokes, you know when I’m tired before I know, and you make the tough days softer. Even when the distance is hard, thinking about you makes everything brighter.</p>
-
-                    <p>On your birthday I wish for you the calm of a quiet morning, the laughter of good friends, and every small joy you deserve. I hope this year brings you confidence to chase what you want and gentle reminders of how loved you already are.</p>
-
-                    <p class="love-you">I love you always. Happy birthday, my queen. ❤️</p>
-
-                    <p class="signature">yours always,<br>Ryan ♡</p>
-
-                    <div class="section-navigation">
-                        <button onclick="showPage('cover')" aria-label="Back to cover">← cover</button>
-                        <button onclick="showPage('memories')" aria-label="Go to memories">our memories →</button>
-                    </div>
-                </article>
             </div>
-        </section>
 
-        <section id="memories" class="page" aria-labelledby="memories-title">
-            <main class="scrapbook-page">
-                <p class="little-note">Actually, we need like 1000 pictures because finding these was so hard and it shouldn't be 😭</p>
 
-                <h1 id="memories-title">But anyway...<br>Some of My Favourite Memories of Us ❤️</h1>
+            <!-- NAVIGATION -->
 
-                <!-- Scrapbook: grid of thumbnails inside a paper area -->
-                <div class="scrapbook-wrapper">
-                    <article class="letter-paper scrapbook-paper" aria-label="Scrapbook">
-                        <div class="scrapbook-grid">
-                            <button class="thumbnail" data-type="image" data-src="pic1.JPG" aria-label="Open Memory 1">
-                                <img src="pic1.JPG" alt="Memory 1: us together" loading="lazy">
-                            </button>
+            <div class="section-navigation">
 
-                            <button class="thumbnail" data-type="image" data-src="pic2.jpg" aria-label="Open Memory 2">
-                                <img src="pic2.jpg" alt="Memory 2: happy moment" loading="lazy">
-                            </button>
+                <button
+                    onclick="showPage('letter')"
+                >
+                    ← back to the letter
+                </button>
 
-                            <button class="thumbnail" data-type="image" data-src="pic3.jpg" aria-label="Open Memory 3">
-                                <img src="pic3.jpg" alt="Memory 3: candid" loading="lazy">
-                            </button>
 
-                            <button class="thumbnail" data-type="video" data-src="vid1-3.mp4" aria-label="Open Memory video">
-                                <video muted playsinline preload="metadata" poster="pic3.jpg">
-                                    <source src="vid1-3.mp4" type="video/mp4">
-                                </video>
-                            </button>
-                        </div>
+                <button
+                    onclick="showPage('final')"
+                >
+                    one last thing →
+                </button>
 
-                        <p class="scrapbook-caption">Click a thumbnail to open the memory. Use the arrows or Esc to close.</p>
-
-                        <div class="section-navigation">
-                            <button onclick="showPage('letter')" aria-label="Back to letter">← letter</button>
-                        </div>
-                    </article>
-                </div>
-            </main>
-        </section>
-    </main>
-
-    <!-- Lightbox / modal for viewing media without covering the whole screen -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-        <div class="lightbox-content" role="dialog" aria-modal="true">
-            <button id="lightboxClose" class="lightbox-close" aria-label="Close">✕</button>
-            <div id="lightboxMedia" class="lightbox-media"></div>
-            <div class="lightbox-controls">
-                <button id="lightboxPrev" class="control-btn" aria-label="Previous">❮</button>
-                <button id="lightboxNext" class="control-btn" aria-label="Next">❯</button>
             </div>
-        </div>
-    </div>
 
-    <script src="script.js" defer></script>
+        </main>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 4 — FINAL
+         ================================ -->
+
+    <section
+        id="final"
+        class="page"
+    >
+
+        <main class="final-card">
+
+            <div class="final-decoration top-left">
+                ❀
+            </div>
+
+            <div class="final-decoration bottom-right">
+                ♡
+            </div>
+
+
+            <p class="and-with-that">
+                And with that...
+            </p>
+
+
+            <h1>
+                Happy 20th,
+                <br>
+                my queen ❤️
+            </h1>
+
+
+            <div class="final-line"></div>
+
+
+            <p class="final-small">
+                I love you always.
+            </p>
+
+
+            <button
+                class="restart-button"
+                onclick="showPage('cover')"
+            >
+                start again ♡
+            </button>
+
+        </main>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
