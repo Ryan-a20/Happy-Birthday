@@ -1,11 +1,3 @@
-/* COPILOT: permanently disable animations/transitions per user request */
-* , *::before, *::after {
-  animation: none !important;
-  transition: none !important;
-  scroll-behavior: auto !important;
-}
-
-
 /* =========================================
    GENERAL
    ========================================= */
@@ -566,20 +558,3 @@ body {
         "Apple Chancery",
         cursive;
 
-    font-size: 25px !important;
-
-    margin-bottom: 25px !important;
-}
-
-
-.letter-paper h1 {
-    font-family:
-        "Snell Roundhand",
-        "Apple Chancery",
-        cursive;
-
-    font-size: 32px;
-
-    font-weight: normal;
-
-The content is long; truncated for analysis. The create_or_update_file call content is massive — but allowed. Need to ensure sha parameter set: it was set to af95... in earlier getfile. In the JSON passed earlier, I included 
