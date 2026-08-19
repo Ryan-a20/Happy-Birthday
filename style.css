@@ -11,12 +11,13 @@
 
 html {
     min-height: 100%;
-    scroll-behavior: smooth;
 }
 
 
 body {
     min-height: 100vh;
+
+    overflow-x: hidden;
 
     font-family:
         Georgia,
@@ -36,21 +37,30 @@ body {
 
 
 /* =========================================
-   PAGE SYSTEM
+   FOUR-PAGE SYSTEM
    ========================================= */
 
+/*
+   EVERY PAGE IS HIDDEN BY DEFAULT.
+*/
+
 .page {
-    display: none;
+    display: none !important;
 
     width: 100%;
+
     min-height: 100vh;
 
-    animation: pageFade 0.65s ease;
+    animation: pageFade 0.6s ease;
 }
 
 
+/*
+   ONLY ONE PAGE GETS active-page
+*/
+
 .page.active-page {
-    display: flex;
+    display: flex !important;
 }
 
 
@@ -58,7 +68,7 @@ body {
 
     from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(10px);
     }
 
     to {
@@ -168,9 +178,7 @@ body {
 }
 
 
-/* =========================================
-   COVER DECORATIONS
-   ========================================= */
+/* DECOR */
 
 .decor {
     position: absolute;
@@ -234,6 +242,8 @@ body {
     position: relative;
 
     margin: auto;
+
+    cursor: pointer;
 
     transition: transform 0.35s ease;
 }
@@ -366,6 +376,10 @@ body {
     font-size: 18px;
 
     z-index: 6;
+
+    box-shadow:
+        inset 0 0 8px rgba(0, 0, 0, 0.35),
+        0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -395,7 +409,7 @@ body {
 
 
 /* =========================================
-   LETTER PAGE
+   LETTER
    ========================================= */
 
 #letter {
@@ -445,9 +459,7 @@ body {
 }
 
 
-/* =========================================
-   TAPE
-   ========================================= */
+/* TAPE */
 
 .paper-tape {
     width: 110px;
@@ -477,9 +489,7 @@ body {
 }
 
 
-/* =========================================
-   LETTER TEXT
-   ========================================= */
+/* LETTER TEXT */
 
 .letter-date {
     text-align: right;
@@ -527,7 +537,7 @@ body {
 
     line-height: 1.85;
 
-    margin-bottom: 36px;
+    margin-bottom: 38px;
 
     color: #15130f;
 }
@@ -694,15 +704,19 @@ body {
 }
 
 
+/*
+   ONLY CURRENT MEMORY SHOWS
+*/
+
 .slide {
-    display: none;
+    display: none !important;
 
     width: 100%;
 }
 
 
 .slide.active {
-    display: block;
+    display: block !important;
 
     animation: slideFade 0.45s ease;
 }
@@ -712,22 +726,18 @@ body {
 
     from {
         opacity: 0;
-
         transform: translateY(10px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
 }
 
 
-/* =========================================
-   POLAROID
-   ========================================= */
+/* POLAROID */
 
 .polaroid {
     width: 78%;
@@ -787,7 +797,7 @@ body {
 
 
 /* =========================================
-   SLIDESHOW BUTTONS
+   SLIDESHOW ARROWS
    ========================================= */
 
 .prev,
@@ -835,9 +845,7 @@ body {
 }
 
 
-/* =========================================
-   DOTS
-   ========================================= */
+/* DOTS */
 
 .slide-dots {
     margin-top: 35px;
@@ -1024,8 +1032,6 @@ body {
     }
 
 
-    /* LETTER */
-
     #letter {
         padding: 20px 10px;
     }
@@ -1048,7 +1054,7 @@ body {
 
         line-height: 1.8;
 
-        margin-bottom: 28px;
+        margin-bottom: 30px;
     }
 
 
@@ -1062,16 +1068,12 @@ body {
     }
 
 
-    /* NAVIGATION */
-
     .section-navigation {
         flex-direction: column;
 
         gap: 22px;
     }
 
-
-    /* MEMORIES */
 
     #memories {
         padding: 20px 10px;
@@ -1137,8 +1139,6 @@ body {
         right: 0;
     }
 
-
-    /* FINAL */
 
     .final-card h1 {
         font-size: 43px;
