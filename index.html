@@ -51,6 +51,7 @@
     <button
         id="musicButton"
         class="music-button"
+        type="button"
         onclick="toggleMusic()"
         aria-label="Play or pause music"
         aria-pressed="false"
@@ -132,8 +133,11 @@
 
             <button
                 class="envelope-button"
+                type="button"
                 onclick="openLetter()"
                 aria-label="Open the letter"
+                aria-controls="letter"
+                aria-expanded="false"
             >
 
 
