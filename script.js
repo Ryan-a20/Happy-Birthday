@@ -12,6 +12,14 @@ function showPage(pageId) {
         page.classList.remove("active-page");
     });
 
+    // If we're returning to the cover, reset the envelope open state
+    const envelope = document.querySelector('.envelope');
+    const envelopeButton = document.querySelector('.envelope-button');
+    if (pageId === 'cover') {
+        if (envelope) envelope.classList.remove('open');
+        if (envelopeButton) envelopeButton.classList.remove('opening');
+    }
+
     // Find the page we want
     const selectedPage = document.getElementById(pageId);
 
@@ -38,28 +46,48 @@ function openLetter() {
 
     const musicButton = document.getElementById("musicButton");
 
+    // envelope elements for animation
+    const envelope = document.querySelector('.envelope');
+    const envelopeButton = document.querySelector('.envelope-button');
+
 
     // Background music volume
-    music.volume = 0.35;
+    if (music) music.volume = 0.35;
 
 
     // Start the music
-    music.play()
-        .then(function() {
+    if (music) {
+        music.play()
+            .then(function() {
 
-            // Show that music is playing
-            musicButton.textContent = "♫";
+                // Show that music is playing
+                musicButton.textContent = "♫";
 
-        })
-        .catch(function(error) {
+            })
+            .catch(function(error) {
 
-            console.log("Music could not start:", error);
+                console.log("Music could not start:", error);
 
-        });
+            });
+    }
 
+    // Play envelope open animation, then navigate to the letter page
+    if (envelope) {
+        // add opening hint-class to hide "open me"
+        if (envelopeButton) envelopeButton.classList.add('opening');
 
-    // Open the birthday letter
-    showPage("letter");
+        // trigger open visuals
+        envelope.classList.add('open');
+
+        // after a short delay (match CSS transition), show the letter page
+        setTimeout(function() {
+            showPage("letter");
+        }, 700);
+
+    } else {
+        // fallback: immediately open the letter
+        showPage("letter");
+    }
 }
 
 
