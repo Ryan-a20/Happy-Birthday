@@ -6,11 +6,16 @@ function showPage(pageId) {
 
     const pages = document.querySelectorAll(".page");
 
+
+    // Hide all pages
     pages.forEach(function(page) {
+
         page.classList.remove("active-page");
+
     });
 
 
+    // Show only requested page
     const selectedPage = document.getElementById(pageId);
 
 
@@ -21,16 +26,17 @@ function showPage(pageId) {
     }
 
 
+    // Go back to top
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "instant"
     });
 
 }
 
 
 /* =========================================
-   OPEN LETTER + MUSIC
+   OPEN ENVELOPE + START MUSIC
    ========================================= */
 
 function openLetter() {
@@ -92,7 +98,7 @@ function toggleMusic() {
 
 
 /* =========================================
-   SLIDESHOW
+   MEMORY SLIDESHOW
    ========================================= */
 
 let currentSlide = 0;
@@ -135,7 +141,6 @@ function showSlide(index) {
 
         const video = slide.querySelector("video");
 
-
         if (video) {
 
             video.pause();
@@ -173,7 +178,7 @@ function changeSlide(direction) {
 }
 
 
-/* CLICK DOT */
+/* DOT CLICK */
 
 function goToSlide(index) {
 
@@ -182,10 +187,6 @@ function goToSlide(index) {
 }
 
 
-/* INITIAL SLIDE */
+/* START ON FIRST MEMORY */
 
 showSlide(0);
-
-  // initialize
-  showPage('cover');
-});
